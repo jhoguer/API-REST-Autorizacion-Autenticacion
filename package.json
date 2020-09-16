@@ -1,0 +1,38 @@
+{
+  "name": "api-rest-autorizacion-autenticacion",
+  "version": "1.0.0",
+  "description": "Authorization and authentication using JWT, MongoDB and ES6 whit Babel",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "helmet": "^4.1.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src --out-dir build",
+    "start": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhoguer/API-REST-Autorizacion-Autenticacion.git"
+  },
+  "author": "jhoguer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhoguer/API-REST-Autorizacion-Autenticacion/issues"
+  },
+  "homepage": "https://github.com/jhoguer/API-REST-Autorizacion-Autenticacion#readme"
+}
