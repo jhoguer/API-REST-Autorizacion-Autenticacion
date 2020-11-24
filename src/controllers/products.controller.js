@@ -8,7 +8,7 @@ export const createProduct = async (req, res) => {
   const productSaved = await newProduct.save()
 
   res.status(201).json( productSaved )
- 
+
 }
 
 export const getProducts = async (req, res) => {
@@ -17,14 +17,17 @@ export const getProducts = async (req, res) => {
   res.json( products )
 }
 
-export const getProductById = (req, res) => {
+export const getProductById = async (req, res) => {
+  // console.log(req.params)
+  const {productId} = req.params
+  const product = await Product.findById(productId)
+  res.status(200).json(product)
+}
+
+export const updateProductById = async (req, res) => {
   
 }
 
-export const updateProductById = (req, res) => {
-  
-}
-
-export const deleteProductById = (req, res) => {
+export const deleteProductById = async (req, res) => {
   
 }
